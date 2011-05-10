@@ -72,7 +72,7 @@ package com.jeremyruppel.operations.group {
 		 * @param payload *
 		 * @private
 		 */
-		protected function onOperationSucceeded(...rest):void {
+		protected function onOperationSucceeded(payload:* = null):void {
 			proceed();
 		}
 
@@ -80,7 +80,7 @@ package com.jeremyruppel.operations.group {
 		 * @param payload *
 		 * @private
 		 */
-		protected function onOperationFailed(payload:*):void {
+		protected function onOperationFailed(payload:* = null):void {
 			if (skipFailed) {
 				onOperationSucceeded(payload);
 			}
